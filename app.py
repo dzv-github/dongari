@@ -36,19 +36,11 @@ if st.session_state.get_start==0:
     if st.button('Select'):
         if player_c=='first':
             st.session_state.get_start+=1
-        elif player_c=='second':
-            st.session_state.get_start+=2
-        elif player_c=='third':
-            st.session_state.get_start+=3
         st.experimental_rerun()
 
 else:
     if st.session_state.get_start==1:
         df=first
-    elif st.session_state.get_start==2:
-        df=second
-    elif st.session_state.get_start==3:
-        df=third
     
     quiz_questions=df['question']
     
