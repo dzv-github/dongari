@@ -52,7 +52,7 @@ else:
     if st.session_state.current_question >= len(quiz_questions):
         st.success("Quiz Finished!")
         st.write(f"Your Score: {st.session_state.player_score}")
-        if st.session_state.player_score==5:
+        if st.session_state.player_score==7:
             st.success('You get a perfect score!!!')
         st.write('program ended')
 
