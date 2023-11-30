@@ -32,7 +32,7 @@ third=pd.read_csv('third_problem.csv')
 
 
 if st.session_state.get_start==0:
-    player_c=st.selectbox('Select categori:',options=['Problem','Problem2'])
+    player_c=st.selectbox('Select categori:',options=['Problems_1','Problems_2'])
     if st.button('Start'):
         if player_c=='Problem':
             st.session_state.get_start+=1
