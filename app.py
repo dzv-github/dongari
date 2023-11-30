@@ -34,9 +34,9 @@ third=pd.read_csv('third_problem.csv')
 if st.session_state.get_start==0:
     player_c=st.selectbox('Select categori:',options=['Problems_1','Problems_2'])
     if st.button('Start'):
-        if player_c=='Problem':
+        if player_c=='Problems_1':
             st.session_state.get_start+=1
-        if player_c=='Problem2':
+        if player_c=='Problems_2':
             st.session_state.get_start+=2
         st.experimental_rerun()
 
