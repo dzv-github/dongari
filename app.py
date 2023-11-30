@@ -27,21 +27,25 @@ def calculate_score(player_choice):
 
 
 first=pd.read_csv('problem.csv')
-second=pd.read_csv('second_problem.csv')
+second=pd.read_csv('problem2.csv')
 third=pd.read_csv('third_problem.csv')
 
 
 if st.session_state.get_start==0:
-    player_c=st.selectbox('Select categori:',options=['Start'])
-    if st.button('Select'):
-        if player_c=='Start':
+    player_c=st.selectbox('Select categori:',options=['Problem','Problem2'])
+    if st.button('Start'):
+        if player_c=='Problem':
             st.session_state.get_start+=1
+        if player_c=='Problem2':
+            st.session_state.get_start+=2
         st.experimental_rerun()
 
 else:
     if st.session_state.get_start==1:
         df=first
     
+    if st.session_state.get_start==2:
+        df=second
     quiz_questions=df['question']
     
 
